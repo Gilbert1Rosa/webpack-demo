@@ -7,20 +7,20 @@ var config = {
     },
     output: {
         filename: 'bundle.js',
-        path: __dirname + '/build/src'
+        path: path.join(__dirname, '/build'),
     },
     mode: 'development',
     resolve: {
-        extensions: ['.js', '.jsx']
+        extensions: ['.js', '.jsx'],
+        alias: {
+            Util: path.resolve(__dirname, 'src/util/'),
+        },
     },
     module: {
         rules: [
             {
                 test: /\.jsx?$/,
                 exclude: /node_modules/,
-                issuer: {
-                    include: path.resolve(__dirname, '/src/package')
-                },
                 use: 'babel-loader'
             }
         ]
@@ -33,6 +33,6 @@ var config = {
     }
 };
 
-module.exports =  (env, argv) => {
+module.exports = (env, argv) => {
     return config;
 }

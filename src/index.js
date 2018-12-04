@@ -1,3 +1,5 @@
-import {IndexClass} from './IndexClass'
+import IndexClass from 'Util/IndexClass';
+import { alterBody } from 'Util/IndexClass';
 
-new IndexClass().alterBody();
+
+alterBody(IndexClass.getValue());
