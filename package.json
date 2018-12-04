@@ -1,0 +1,24 @@
+{
+  "name": "webpack1",
+  "version": "1.0.0",
+  "description": "Prueba en webpack",
+  "main": "webpack.config.js",
+  "scripts": {
+    "start": "webpack-dev-server --open",
+    "build": "webpack --config webpack.config.js --output-filename",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Gilbert Rosa",
+  "license": "ISC",
+  "dependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "webpack": "^4.26.1",
+    "webpack-dev-server": "^3.1.10"
+  },
+  "devDependencies": {
+    "html-webpack-plugin": "^3.2.0",
+    "webpack": "^4.26.1",
+    "webpack-cli": "^3.1.2"
+  }
+}
